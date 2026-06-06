@@ -1,0 +1,98 @@
+body {
+    background-color: white;
+    color: black;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+#login-screen {
+    background: #fff;
+    padding: 20px;
+    border: 2px solid #000;
+    z-index: 1000;
+}
+
+.login-box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+}
+
+#password-input {
+    padding: 10px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px;
+    cursor: pointer;
+    background: #000;
+    color: #fff;
+    border: none;
+}
+
+.content {
+    text-align: center;
+    animation: flash 0.1s infinite alternate;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 5rem;
+    margin: 0;
+}
+
+.smiley-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.smiley {
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    border-radius: 50%;
+    border: 5px solid black;
+    position: relative;
+}
+
+.smiley::before, .smiley::after {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: black;
+    border-radius: 50%;
+    top: 30px;
+}
+
+.smiley::before { left: 25px; }
+.smiley::after { right: 25px; }
+
+.smiley-mouth {
+    position: absolute;
+    width: 50px;
+    height: 25px;
+    border-bottom: 5px solid black;
+    border-radius: 0 0 50px 50px;
+    top: 50px;
+    left: 20px;
+}
+
+@keyframes flash {
+    from { background-color: white; color: black; }
+    to { background-color: black; color: white; }
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YOU ARE AN IDIOT</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="idiot-bg">
+    <div class="content">
+        <h1>YOU ARE AN IDIOT!</h1>
+        <div class="smiley-container">
+            <div class="smiley"></div>
+            <div class="smiley"></div>
+            <div class="smiley"></div>
+        </div>
+        <p>☺☺☺</p>
+    </div>
+    <audio id="idiotAudio" autoplay loop>
+        <source src="https://www.soundboard.com/handler/DownLoadTrack.ashx?cliptoken=0" type="audio/mpeg">
+    </audio>
+    <script>
+        function spawnWindow() {
+            let x = Math.random() * (window.screen.width - 400);
+            let y = Math.random() * (window.screen.height - 300);
+            window.open("idiot.html", "_blank", `width=400,height=300,left=${x},top=${y}`);
+        }
+        setInterval(spawnWindow, 1000);
+        window.onbeforeunload = function() { return "YOU ARE AN IDIOT!"; };
+    </script>
+</body>
+</html>
